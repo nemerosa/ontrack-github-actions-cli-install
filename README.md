@@ -8,6 +8,10 @@ GitHub action to install and configure the [Yontrack CLI](https://github.com/nem
 
 Version of the [Yontrack CLI](https://github.com/nemerosa/ontrack-cli/releases) to install. If not specified, defaults to the latest available.
 
+### `github-token`
+
+GitHub token to get the latest version of the CLI (when `version` is not provided).
+
 ### `url`
 
 URL of the Yontrack instance to target. If this input is set and the `token` one as well, this action will configure the CLI based on this information.
@@ -19,10 +23,6 @@ Authentication token to use to connect to Yontrack (required if URL is set). If 
 ### `cli-config`
 
 Optional name of the configuration to create for the CLI. Defaults to `default`.
-
-### `github-token`
-
-GitHub token to get the latest version of the CLI (when `version` is not provided).
 
 ### `conn-retry-count`
 
