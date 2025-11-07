@@ -1,0 +1,38 @@
+{
+  "name": "ontrack-github-actions-cli-config",
+  "version": "2.0.0",
+  "description": "GitHub action to configure Yontrack using one file",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest --passWithNoTests",
+    "all": "npm run lint && npm run prepare && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemerosa/ontrack-github-actions-cli-config.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nemerosa/ontrack-github-actions-cli-config/issues"
+  },
+  "homepage": "https://github.com/nemerosa/ontrack-github-actions-cli-config",
+  "dependencies": {
+    "@nemerosa/ontrack-github-actions-module-install": "^1.2.0",
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.47.0",
+    "jest": "^29.6.3",
+    "jest-extended": "^4.0.1"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ]
+  }
+}
