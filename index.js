@@ -19,6 +19,7 @@ async function setup() {
         logging: true,
         yontrackUrl: core.getInput('url'),
         yontrackToken: core.getInput('token'),
+        yontrackUser: core.getInput('cli-config'),
         connRetryCount: core.getInput('conn-retry-count'),
         connRetryWait: core.getInput('conn-retry-wait'),
     })
