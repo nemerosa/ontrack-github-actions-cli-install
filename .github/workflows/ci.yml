@@ -55,9 +55,13 @@ jobs:
         run: |
           yontrack version --cli
 
-      - name: "Status"
+      - name: Commit built files
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          git status
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add dist/
+          git diff --staged --quiet || git commit -m "chore: update built files [skip ci]"
 
       - name: Publication
         id: npm-publish
