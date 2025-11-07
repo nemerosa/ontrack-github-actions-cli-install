@@ -8,10 +8,6 @@ on:
 
 concurrency: "ci-${{ github.ref }}"
 
-permissions:
-  packages: read
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,11 +23,14 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@nemerosa'
 
+      - name: Configure npm for GitHub Packages
+        run: |
+          echo "@nemerosa:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+
       - name: Install dependencies
         id: npm-ci
         run: npm ci
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Building and running tests
         id: npm-build
