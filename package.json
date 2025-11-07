@@ -1,7 +1,8 @@
 {
-  "name": "ontrack-github-actions-cli-config",
-  "version": "2.0.0",
-  "description": "GitHub action to configure Yontrack using one file","main": "dist/index.js",
+  "name": "ontrack-github-actions-cli-install",
+  "version": "0.0.0",
+  "description": "GitHub action to install and configure the Yontrack CLI",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx @vercel/ncc build && npx convert-action",
     "lint": "eslint .",
@@ -11,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nemerosa/ontrack-github-actions-cli-config.git"
+    "url": "git+https://github.com/nemerosa/ontrack-github-actions-cli-install.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nemerosa/ontrack-github-actions-cli-config/issues"
+    "url": "https://github.com/nemerosa/ontrack-github-actions-cli-install/issues"
   },
-  "homepage": "https://github.com/nemerosa/ontrack-github-actions-cli-config",
+  "homepage": "https://github.com/nemerosa/ontrack-github-actions-cli-install",
   "dependencies": {
     "@nemerosa/ontrack-github-actions-module-install": "^1.2.0",
     "@actions/core": "^1.11.1"
