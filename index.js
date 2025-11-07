@@ -12,7 +12,7 @@ const client = require('@nemerosa/ontrack-github-actions-module-install');
 async function setup() {
 
     // Installing and configuring the CLI
-    const {version} = await client.install({
+    const {version, dir} = await client.install({
         version: core.getInput('version'),
         githubToken: core.getInput('github-token'),
         acceptDraft: false,
@@ -24,5 +24,6 @@ async function setup() {
     })
 
     core.setOutput('installed', version);
+    core.addPath(dir)
     core.info(`Yontrack CLI version ${version} installed`);
 }
