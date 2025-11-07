@@ -3,7 +3,16 @@
         "main"
     ],
     "plugins": [
-        "@semantic-release/commit-analyzer",
+        ["@semantic-release/commit-analyzer", {
+          "preset": "angular",
+          "releaseRules": [
+            {"type": "docs", "release": false},
+            {"type": "fix", "release": "patch"},
+            {"type": "feat", "release": "minor"},
+            {"type": "refactor", "release": "major"},
+            {"type": "release", "release": "patch"}
+          ],
+        }],
         "@semantic-release/release-notes-generator",
         "@semantic-release/changelog",
         [
