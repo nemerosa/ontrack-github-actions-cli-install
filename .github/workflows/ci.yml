@@ -6,6 +6,8 @@ on:
     branches:
       - main
 
+concurrency: "build-${{ github.ref }}"
+
 jobs:
   build:
     runs-on: ubuntu-latest
