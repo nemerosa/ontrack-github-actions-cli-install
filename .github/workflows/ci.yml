@@ -6,7 +6,11 @@ on:
     branches:
       - main
 
-concurrency: "build-${{ github.ref }}"
+concurrency: "ci-${{ github.ref }}"
+
+permissions:
+  packages: read
+  contents: write
 
 jobs:
   build:
