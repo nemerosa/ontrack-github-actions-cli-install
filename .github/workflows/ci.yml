@@ -22,3 +22,16 @@ jobs:
       - name: Building and running tests
         id: npm-build
         run: npm run build && npm test
+
+        # Testing the action
+
+      - name: "Test: download"
+        id: test-download
+        uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Test: getting the version"
+        id: test-version
+        run: |
+          ./yontrack version --cli
