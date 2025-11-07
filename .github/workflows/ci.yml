@@ -51,7 +51,7 @@ jobs:
       - name: "Test: getting the version"
         id: test-version
         run: |
-          ./yontrack version --cli
+          yontrack version --cli
 
       - name: Publication
         id: npm-publish
