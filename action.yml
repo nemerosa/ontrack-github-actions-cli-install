@@ -11,13 +11,13 @@ inputs:
       not provided)
     required: false
   url:
-    description: URL of the Yontrack instance to target
+    description: URL of the Yontrack instance to target. Defaults to the `YONTRACK_URL` environment variable.
     required: false
     default: ''
   token:
     description: >-
       Authentication token to use to connect to Yontrack (required if URL is
-      set)
+      set). DEFAULTS to the `YONTRACK_TOKEN` environment variable.
     required: false
     default: ''
   conn-retry-count:
