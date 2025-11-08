@@ -11,7 +11,9 @@ inputs:
       not provided)
     required: false
   url:
-    description: URL of the Yontrack instance to target. Defaults to the `YONTRACK_URL` environment variable.
+    description: >-
+      URL of the Yontrack instance to target. Defaults to the `YONTRACK_URL`
+      environment variable.
     required: false
     default: ''
   token:
