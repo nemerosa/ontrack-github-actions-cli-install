@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/nemerosa/ontrack-github-actions-cli-install",
   "dependencies": {
-    "@nemerosa/ontrack-github-actions-module-install": "^1.2.0",
+    "@nemerosa/ontrack-github-actions-module-install": "^1.2.1",
     "@actions/core": "^1.11.1"
   },
   "devDependencies": {

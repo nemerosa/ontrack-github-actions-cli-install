@@ -55,6 +55,15 @@ jobs:
         run: |
           yontrack version --cli
 
+      - name: "Test: local configuration"
+        id: test-config
+        uses: ./
+        env:
+          YONTRACK_URL: ${{ vars.YONTRACK_URL }}
+          YONTRACK_TOKEN: ${{ secrets.YONTRACK_TOKEN }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit and push built files
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
