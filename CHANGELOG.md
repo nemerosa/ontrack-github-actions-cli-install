@@ -1,3 +1,5 @@
+# [2.0.0](https://github.com/nemerosa/ontrack-github-actions-cli-install/compare/v1.1.0...v2.0.0) (2026-05-06)
+
 # [1.1.0](https://github.com/nemerosa/ontrack-github-actions-cli-install/compare/v1.0.0...v1.1.0) (2025-11-08)
 
 
